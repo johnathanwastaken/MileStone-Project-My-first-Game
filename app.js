@@ -6,13 +6,15 @@ const character = document.getElementById("character")
 //to put everything together from what I had on CSS.
 // I learned about this on https://www.javascripttutorial.net/javascript-dom/javascript-classlist/
 function jump() {
+    //This line of code is basically to stop the character from initiating the jump action so the animation won't be reset.
+    if(character.classList != "jump"){
     character.classList.add("jump");
     //Setting the timeout function is used for the class to disappear and to let my character to jump more than
     //once and not to be locked for jumping just once.
     setTimeout(function (){
         character.classList.remove("jump")
-    }, 400)
-}
+    }, 300)
+}}
 
 //Be able to make my character jump from doing a click on the mouse
 document.addEventListener("click", function (event){

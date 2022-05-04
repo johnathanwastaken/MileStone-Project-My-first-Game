@@ -1,4 +1,3 @@
-
 .game {
     width: 1100px;
     height: 600px;
@@ -14,7 +13,7 @@
     background-image: url('/assets/character/Run__003.png');
     background-size: 100px 100px;
     position: relative;
-    top: 470px;
+    top: 457px;
 }
 
 .jump{
@@ -26,18 +25,40 @@ position making it look like its animated. This is by moving the pixels from whe
 its at to the next position. https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp */
 @keyframes jump {
     0% {
-        top: 470px;
+        top: 457px;
     }
     30%{
-        top: 450px;
-    }
-    50%{
         top: 400px;
     }
+    50%{
+        top: 360px;
+    }
     80%{
-        top: 450px;
+        top: 400px;
     }
     100%{
-        top: 470px;
+        top: 457px;
+    }
+}
+
+#cone{
+    width: 55px ;
+    height: 55px;
+    position: relative;
+    top: 400px;
+    left: 1044px;
+
+    background-image: url("assets/block/PinClipart.com_orange-cone-clip-art_1874147.png") ;
+    background-size: 55px 55px ;
+
+    animation: obstacle 1s infinite linear;
+}
+
+@keyframes obstacle {
+    0% {
+        left: 1044px;
+    }
+    100%{
+        left: -20px;
     }
 }
