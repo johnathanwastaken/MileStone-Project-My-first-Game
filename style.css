@@ -23,24 +23,20 @@
 
 /* Keyframes are basically making the picture move from one position to the next 
 position making it look like its animated. This is by moving the pixels from where 
-its at to the next position.  */
+its at to the next position. https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp */
 @keyframes jump {
     0% {
         top: 470px;
     }
-
     30%{
         top: 450px;
     }
-
     50%{
         top: 400px;
     }
-
     80%{
         top: 450px;
     }
-
     100%{
         top: 470px;
     }
