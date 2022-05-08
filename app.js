@@ -1,5 +1,6 @@
 const character = document.getElementById("character")
-
+const cone = document.getElementById('cone')
+const score = document.getElementById('score')
 //The classList is a read-only property of an element that returns a 
 //live collection of CSS classes. Basically I used this to be able to get the keyframes 
 //and also the jump element to be used together for this function. This basically helps
@@ -22,7 +23,18 @@ document.addEventListener("click", function (event){
 });
 
 //Make collisions for the character to jump over
-
+//I used window.getComputedStyle because I'm able to see when my character's position hits the 
+//top and also I need to have the position of the cone from the left. With this information I 
+//make a if  statment of when the cone hits the position of the character if said charcter doesn't
+//jump on time.
+setInterval(() => {
+const characterTop = parseInt(window.getComputedStyle(character)
+    .getPropertyValue('top'));
+    console.log(characterTop)
+}, 50);
 //Reset level after getting hit by a obstacle 
 
 // Keep score after jumping over obstacle 
+setInterval(() => {
+    score.innerText++;
+})

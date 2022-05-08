@@ -7,6 +7,10 @@
     background-size: cover;
 }
 
+#score {
+    text-align: center;
+}
+
 #character {
     width: 100px;
     height: 100px;
