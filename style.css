@@ -35,7 +35,7 @@ its at to the next position. https://www.w3schools.com/cssref/css3_pr_animation-
         top: 400px;
     }
     50%{
-        top: 360px;
+        top: 350px;
     }
     80%{
         top: 400px;
@@ -55,14 +55,14 @@ its at to the next position. https://www.w3schools.com/cssref/css3_pr_animation-
     background-image: url("assets/block/PinClipart.com_orange-cone-clip-art_1874147.png") ;
     background-size: 55px 55px ;
 
-    animation: obstacle 1s infinite linear;
+    animation: cone 1s infinite linear;
 }
 
-@keyframes obstacle {
+@keyframes cone {
     0% {
         left: 1044px;
     }
     100%{
-        left: -20px;
+        left: -50px;
     }
 }

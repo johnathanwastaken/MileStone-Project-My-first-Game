@@ -26,15 +26,26 @@ document.addEventListener("click", function (event){
 //I used window.getComputedStyle because I'm able to see when my character's position hits the 
 //top and also I need to have the position of the cone from the left. With this information I 
 //make a if  statment of when the cone hits the position of the character if said charcter doesn't
-//jump on time.
+//jump on time. Source: https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
 setInterval(() => {
+    score.innerText++;
 const characterTop = parseInt(window.getComputedStyle(character)
     .getPropertyValue('top'));
-    console.log(characterTop)
+const coneLeft = parseInt(window.getComputedStyle(cone)
+    .getPropertyValue('left'));
+    //This is for when the cone exits the screen it will just disappear. The empty string will
+    //remove none and continue showing the cone
+    if(coneLeft <0) {
+        cone.style.display = 'none';
+    } else {
+        cone.style.display = '';
+    }
+
+    if (coneLeft < 50 && coneLeft > 0 && characterTop>450){
+        alert("Game Over!" + "\nYou got a score of: " + score.innerText + 
+        "\nPlay again?");
+        location.reload();
+    }
 }, 50);
 //Reset level after getting hit by a obstacle 
 
-// Keep score after jumping over obstacle 
-setInterval(() => {
-    score.innerText++;
-})
